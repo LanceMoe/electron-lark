@@ -74,9 +74,9 @@ rightClickContextMenu({
 });
 
 if (process.mas) app.setName('飞书Feishu');
-// fixup High CPU Usage issue
-// see https://github.com/electron/electron/issues/11908
-app.disableHardwareAcceleration();
+// // fixup High CPU Usage issue
+// // see https://github.com/electron/electron/issues/11908
+// app.disableHardwareAcceleration();
 
 // 是否处于焦点，检点监听
 let onFocus = false;
@@ -434,7 +434,7 @@ const menuTemplate: (MenuItemConstructorOptions | MenuItem)[] = [
       {
         label: 'Github',
         click: function () {
-          shell.openExternal('https://github.com/Ericwyn/electron-lark');
+          shell.openExternal('https://github.com/LanceMoe/electron-lark');
         },
       },
     ],
@@ -528,7 +528,7 @@ function showLarkNotify(title: string, opt: Record<string, string>, channelId: s
     electronNotification.addListener('click', function () {
       if (mainWindow != null) mainWindow.show();
       // 通过注入 js 打开具体的对话聊天框
-      // 参考 https://github.com/Ericwyn/electron-lark/commit/f8c4781fab5c6cd704aa2bba4be0d4d0cedcaab1#commitcomment-51571446
+      // 参考 https://github.com/LanceMoe/electron-lark/commit/f8c4781fab5c6cd704aa2bba4be0d4d0cedcaab1#commitcomment-51571446
       if (webContents != null) {
         try {
           webContents.executeJavaScript(`

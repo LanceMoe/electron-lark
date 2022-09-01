@@ -1,24 +1,40 @@
 {
-  "name": "electron-quick-start-typescript",
+  "name": "electron-lark-typescript",
   "version": "1.1.6",
-  "description": "A minimal Electron application written with Typescript",
+  "description": "An Electron application for Feishu(Lark)",
   "main": "src/main.js",
+  "linux": {
+    "category": "Office",
+    "packageCategory": "Office",
+    "synopsis": "An Electron application for Feishu(Lark)",
+    "icon": "./build/icons",
+    "target": [
+      {
+        "target": "deb",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "desktop": {
+      "Encoding": "UTF-8"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "watch": "tsc -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "pnpm build && cd dist && electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start-typescript",
+  "repository": "https://github.com/LanceMoe/electron-lark",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo",
-    "typescript"
+    "typescript",
+    "Feishu",
+    "Lark",
+    "飞书"
   ],
-  "author": "GitHub",
+  "author": "LanceMoe <admin@lance.moe>",
   "license": "CC0-1.0",
   "devDependencies": {
     "@types/node": "^18.7.14",

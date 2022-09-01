@@ -156,7 +156,7 @@ function checkUpdate(showCheckNotify?: boolean, successCb?: () => void) {
 
           updateNotify.addListener('click', function () {
             console.log('open github for download release');
-            electron.shell.openExternal('https://github.com/Ericwyn/electron-lark/releases');
+            electron.shell.openExternal('https://github.com/LanceMoe/electron-lark/releases');
           });
           updateNotify.show();
         } else {
