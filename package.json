@@ -51,6 +51,6 @@
     "typescript": "^4.7.2"
   },
   "dependencies": {
-    "electron-context-menu": "^3.5.0"
+    "electron-context-menu": "^3.6.1"
   }
 }
